@@ -1,0 +1,21 @@
+Rover Arduino Pinout
+
+
+3.3v - NRF
+5v - Servos
+GND - NRF, Servos, DRV
+vin - DRV vm
+
+1 - 
+2 - Servo1
+3 - Servo2
+4 - 
+5 - DRV IN1
+6 - DRV IN2
+7 - NRF CE
+8 - 
+9 - 
+10 - NRF CSN 
+11 - NRF MOS
+12 - NRF MSC
+13 - NRF SCK
