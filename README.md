@@ -1,6 +1,6 @@
 # RC_Car
 
-Building an Arduino powered RC car. Hoping to eventually turn this into more than an RC car at some point (autonomy? camera/laser with gimbal?). Mostly just trying to keep track of files for myself as of now, but feel free to use any of this. CAD is done in Solidworks/Onshape (free option), most parts are designed to be 3D printed. Code could be a useful reference for PWM control/radio communication.
+Building an Arduino powered RC car. Hoping to eventually turn this into more than an RC car at some point (autonomy? camera/laser with gimbal?). Mostly just trying to keep track of files for myself as of now, but feel free to use any of this. CAD is done in Solidworks/Onshape (free option) and most parts are designed to be 3D printed. Code could be a useful reference for PWM control/radio communication.
 
 
 ## Hardware
