@@ -7,9 +7,9 @@
 RF24 radio(7, 10); // CE, CNS
 byte address[6] = "10000";
 
-int X = A0;  // analog pin used to connec t the potentiometer
+int X = A0;  // analog pin used to connect the X potentiometer
 int Xval;    // variable to read the value from the analog pin
-int Y = A1;  // analog pin used to connect the potentiometer
+int Y = A1;  // analog pin used to connect the Y potentiometer
 int Yval;   // variable to read the value from the analog pin
 
 
@@ -29,10 +29,10 @@ void setup() {
 }
 
 void loop() {
-  Xval = analogRead(X);            // reads the value of the potentiometer (value between 0 and 1023) 
-  Xval = map(Xval, 0, 1023, 50, 130);     // scale it to use it with the servo (value between 0 and 180) 
-  Yval = analogRead(Y);            // reads the value of the potentiometer (value between 0 and 1023) 
-  Yval = map(Yval, 0, 1023, -255, 255);     // scale it to use it with the servo (value between 0 and 180) 
+  Yval = analogRead(Y);         
+  Yval = map(Yval, 0, 1023, 50, 130);  
+  Xval = analogRead(X);           
+  Xval = map(Xval, 0, 1023, -255, 255);      
 
   int pckg[] = {Xval, Yval};
   radio.write(&pckg, sizeof(pckg));
