@@ -1,4 +1,3 @@
-
 #include <SPI.h>
 //#include "RF24.h"
 //#include <nRF24L01.h>
@@ -21,7 +20,7 @@ int DRV_IN2 = 6;              // output pin 2 for motor PWM
 int battPin = A0;             // analog pin used to connect to battery (voltage divider)
 int battRead;                 // variable to read the value from battPin
 float battVoltage;            // battery voltage
-int ledPin = 4;               // pin that sends voltage to battery indicating LED
+int ledPin = 1;               // pin that sends voltage to battery indicating LED
 
 
 void setup() {
@@ -38,13 +37,14 @@ void setup() {
   pinMode(DRV_IN1, OUTPUT);
   pinMode(DRV_IN2, OUTPUT);
   pinMode(battPin, INPUT);
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
   battRead = analogRead(battPin);
-  battVoltage = (5.*3./1023.)*battPin;  //5 nominal input voltage, voltage divider gain 3
+  battVoltage = (5.*2.47/1023.)*(float)battRead;  //5 nominal input voltage, voltage divider gain 3
   if (battVoltage < 10.5){
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin, LOW);
   } else {
     digitalWrite(ledPin, LOW);
   }
@@ -67,12 +67,13 @@ void loop() {
       digitalWrite(DRV_IN2, LOW);
       analogWrite(DRV_IN1, abs(Xval));
     }
+    
     Serial.println(battVoltage);
     Serial.println(Xval);
     Serial.println(Yval);
-  } else {
-    Serial.println("Can't Find Radio");
-  }
+  } //else {
+    //Serial.println("Can't Find Radio");
+  //}
   
 }
 
