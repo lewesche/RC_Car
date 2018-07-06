@@ -2,20 +2,28 @@ Rover Arduino Pinout
 
 
 3.3v - NRF
-5v - Servos
-GND - NRF, Servos, DRV
-vin - DRV vm
+5v - Tb6612
+GND - NRF, TB6612
+vin - Vm
 
+0 -
 1 - 
-2 - Servo1
-3 - Servo2
-4 - 
-5 - DRV IN1
-6 - DRV IN2
+2 - Servo1, Servo2
+3 - AIN1
+4 - AIN2
+5 - PWMA
+6 - IN1B
 7 - NRF CE
-8 - 
-9 - 
-10 - NRF CSN 
+8 - NRF CSN
+9 - BIN2
+10 - PWMB
 11 - NRF MOS
 12 - NRF MSC
 13 - NRF SCK
+
+A0 - Voltage/3 read
+A1 - 
+A2 - 
+A3 - 
+A4 - 
+A5 - Low voltage indicator LED 

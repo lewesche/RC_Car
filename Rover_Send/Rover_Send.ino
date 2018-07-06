@@ -1,5 +1,5 @@
 #include <SPI.h>
-//#include "RF24.h"
+//#include "RF24.h" 
 //#include <nRF24L01.h>
 #include <RF24.h>
 //#include <Servo.h>
@@ -20,7 +20,7 @@ void setup() {
   Serial.begin(115200);
   radio.begin();
   radio.openWritingPipe(address);
-  radio.setPALevel(RF24_PA_LOW);
+  radio.setPALevel(RF24_PA_HIGH);
   radio.setDataRate(RF24_250KBPS);
   radio.stopListening();
   
