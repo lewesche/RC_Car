@@ -37,7 +37,7 @@ void setup() {
   radio.setDataRate(RF24_250KBPS);
   radio.startListening();
   
-  servo.attach(2);  // attaches the servo on pin 3 to the servo object
+  servo.attach(2);  // attaches the servo on pin 2 to the servo object
 
   pinMode(M_IN1, OUTPUT);
   pinMode(M_IN2, OUTPUT);

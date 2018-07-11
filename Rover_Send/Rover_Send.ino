@@ -4,7 +4,7 @@
 #include <RF24.h>
 //#include <Servo.h>
 
-RF24 radio(7, 10); // CE, CNS
+RF24 radio(7, 8); // CE, CNS
 byte address[6] = "10000";
 
 int X = A0;  // analog pin used to connect the X potentiometer
