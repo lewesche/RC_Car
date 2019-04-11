@@ -1,0 +1,28 @@
+Rover Arduino Pinout
+
+
+3.3v - NRF
+5v - Joystick
+GND - NRF, Joystick
+
+0 -
+1 - 
+2 - 
+3 - 
+4 - 
+5 - 
+6 - 
+7 - NRF CE
+8 - NRF CSN
+9 - 
+10 - 
+11 - NRF MOS
+12 - NRF MSC
+13 - NRF SCK
+
+A0 - VRY
+A1 - VRX
+A2 - 
+A3 - 
+A4 - 
+A5 - 
